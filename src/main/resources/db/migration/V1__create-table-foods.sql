@@ -1,0 +1,7 @@
+CREATE TABLE foods (
+  id BIGINT AUTO_INCREMENT NOT NULL,
+  title VARCHAR(255) NULL,
+  image VARCHAR(255) NULL,
+  price INT NULL,
+  CONSTRAINT pk_foods PRIMARY KEY (id)
+);
