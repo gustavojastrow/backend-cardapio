@@ -20,9 +20,11 @@ public class Food {
     private String title;
     private String image;
     private Integer price;
+    private String description;
     public Food(FoodRegister data) {
         this.image = data.image();
         this.title = data.title();
         this.price = data.price();
+        this.description = data.description();
     }
 }
