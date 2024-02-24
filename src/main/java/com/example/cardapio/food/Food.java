@@ -1,6 +1,7 @@
 package com.example.cardapio.food;
 
 import com.example.cardapio.dto.FoodRegister;
+import com.example.cardapio.dto.FoodUpdate;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -19,12 +20,20 @@ public class Food {
     private Long id;
     private String title;
     private String image;
-    private Integer price;
+    private Float price;
     private String description;
     public Food(FoodRegister data) {
         this.image = data.image();
         this.title = data.title();
         this.price = data.price();
         this.description = data.description();
+    }
+
+    public void updateFood(FoodUpdate data){
+        this.image = data.image();
+        this.title = data.title();
+        this.price = data.price();
+        this.description = data.description();
+
     }
 }
